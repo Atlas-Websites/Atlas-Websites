@@ -1,0 +1,271 @@
+/* CSS Main */
+
+/* Created by Samuel Hinchliffe */
+
+/* For Atlas Websites */
+
+/* 10/01/2021 */
+
+@font-face {
+  font-family: Montserrat-Regular;
+  src: url("/font/Montserrat-Regular.otf") format("opentype");
+}
+
+@font-face {
+  font-family: Montserrat-Bold;
+  src: url("/font/Montserrat-Bold.otf") format("opentype");
+}
+
+@font-face {
+  font-family: Montserrat-Medium;
+  src: url("/font/Montserrat-Medium.otf") format("opentype");
+}
+
+@font-face {
+  font-family: Montserrat-Light;
+  src: url("/font/Montserrat-Light.otf") format("opentype");
+}
+
+@font-face {
+  font-family: Montserrat-Thin;
+  src: url("/font/Montserrat-Thin.otf") format("opentype");
+}
+
+@keyframes fadein {
+  from { opacity: 0; transform: translateY(-30px); }
+  to   { opacity: 1; }
+}
+
+header {  
+  /* This section calls the slideInFromLeft animation we defined above */
+  animation: 1s ease-out 0s 1 fadein;
+
+}
+
+html, body {
+  font-family: Montserrat-Regular;
+  letter-spacing: 0.060em;
+  color: #1A4362;
+}
+
+/* Header */
+
+.logo-text {
+  font-family: 'Philosopher', sans-serif;
+  color: #1A4362;
+  font-size: 40px;
+}
+
+.nav-text {
+  color: #1A4362;
+  padding-bottom: 3px;
+
+}
+
+.nav-text:after {
+  content: '';
+  display: block;
+  margin: auto;
+  height: 2px;
+  width: 0px;
+  background: transparent;
+  transition: width .5s ease, background-color .5s ease;
+  margin-top: 2px;
+}
+
+
+
+.nav-text:hover:after {
+  width: 100%;
+  background: #86BFE9;
+}
+
+.nav-text:hover {
+  color: #86BFE9;
+  padding-bottom: 3px;
+}
+
+.active-nav-text {
+  color: #86BFE9;
+  border-bottom: 2px solid #86BFE9;
+  padding-bottom: 3px;
+}
+
+.active-nav-text:hover {
+  pointer-events: none;
+}
+
+.logo-img {
+  width: 40px;
+  margin-right: 20px;
+}
+
+.atlas-button {
+  background-color: #1A4362;
+  color: white;
+  border: 1px solid #1A4362;
+  border-radius: 9px;
+  font-size: 1.4rem;
+  padding-top: 0px;
+  text-align: center;
+  vertical-align: -moz-middle-with-baseline;
+  padding-bottom: 0px;
+  padding-left: 10px;
+  padding-right: 10px;
+  transition: 0.3s;
+  margin-top: 7px;
+  cursor: pointer;
+}
+
+.atlas-button:hover {
+  background-color: white;
+  color: #1A4362;
+}
+
+.navbar-toggler {
+  padding: 0rem 2px !important;
+  border-color: white !important;
+  width: 41px
+}
+
+header {
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #1A4362;
+}
+
+.nav-link {
+  font-size: 1.4rem;
+  margin-right: 10px;
+}
+
+.fa-header{
+  display: none;
+}
+
+@media only screen and (min-width: 767px) and  (max-width: 1110px) {
+    .nav-text{
+      font-size: 1.5vw;
+    }
+    .nav-link {
+      margin-right: 0px;
+  }
+  .atlas-button{
+    font-size: 16px;
+    margin-top: 16px;
+  }
+  .logo-text{
+    font-size: 35px;
+  }
+  .logo-img {
+    width: 35px;
+    margin-right: 10px;
+  }
+} 
+
+
+/* Header Mobile */
+
+@media only screen and (max-width: 767px) {
+  header {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .logo-text {
+    font-size: 8vw;
+  }
+  .nav-text {
+    color: #1A4362;
+    padding-bottom: 3px;
+    display: inline-block;
+  width: 200px;
+  }
+  .logo-img {
+    width: 7vw;
+    margin-right: 10px;
+  }
+  .nav-link {
+    text-align: center;
+    color: #86BFE9;
+    border-bottom: 2px solid #86BFE9;
+    padding-bottom: 3px;
+  }
+  .active-nav-text {
+    border-bottom: none;
+  }
+  .nav-item-top {
+    border-top: 4px solid #1A4362;
+  }
+  .atlas-button {
+    display: block;
+    margin: auto;
+    margin-top: auto;
+    margin-top: 10px;
+  }
+  .fa-header{
+    color: #1A4362;
+    display: block;
+    margin-top: 4px;
+float: left;
+  }
+}
+
+.ham {
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: transform 400ms;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: 47px;
+  color: #1A4362;
+  padding-top: 5px;
+}
+
+.hamRotate.active {
+  transform: rotate(45deg);
+}
+
+.hamRotate180.active {
+  transform: rotate(180deg);
+}
+
+.line {
+  fill: none;
+  transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+  stroke: #1A4362;
+  stroke-width: 4.5;
+  stroke-linecap: round;
+}
+
+.ham7 .top {
+  stroke-dasharray: 40 82;
+}
+
+.ham7 .middle {
+  stroke-dasharray: 40 111;
+}
+
+.ham7 .bottom {
+  stroke-dasharray: 40 161;
+}
+
+.ham7.active .top {
+  stroke-dasharray: 17 82;
+  stroke-dashoffset: -62px;
+}
+
+.ham7.active .middle {
+  stroke-dashoffset: 23px;
+}
+
+.ham7.active .bottom {
+  stroke-dashoffset: -83px;
+}
+
+
+
+/* End of Header */
+
+/* MM */
