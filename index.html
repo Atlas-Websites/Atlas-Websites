@@ -13,12 +13,9 @@
     content="kent, atlas websites, websites, medway, websites creators, website designers, web design">
   <meta name="author" content="Samuel Hinchliffe">
 
-  
-
- 
-
 
   <!-- All the JS -->
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
     integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
     crossorigin="anonymous"></script>
@@ -30,65 +27,755 @@
     crossorigin="anonymous"></script>
   <script src="js/main.js"></script>
   <script src="https://kit.fontawesome.com/cce067e9c9.js" crossorigin="anonymous"></script>
-  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 
 
- <!-- All the CSS -->
- <link rel="stylesheet" href="css/main.css">
- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-   integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
- <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Philosopher&display=swap" rel="stylesheet">
+  <!-- All the CSS -->
+  <link href="https://fonts.googleapis.com/css2?family=Philosopher&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
 
 
 </head>
 
 <body>
+  <!-- Header -->
   <header>
-    <nav class="navbar navbar-expand-md navbar-light bg-light">
-      <img class="logo-img" src="img/AtlasWebLogo.png">
-      <a class="navbar-brand mr-auto" href="index.html"><strong class="logo-text">Atlas Websites</strong></a>
-      <button class="navbar-toggler d-lg-none collapsed" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
+    <div class="mobile-check"></div>
+    <nav id="the-header" class="fixed-top navbar navbar-expand-md navbar-light bg-light">
+      <img alt="Atlas-Websites Logo" class="logo-img" src="img/AtlasWebLogo.png">
+      <a class="navbar-brand mr-auto" href="index.html">
+        <h1><strong class="logo-text">Atlas Websites</strong></h1>
+      </a>
+      <button class="navbar-toggler d-lg-none collapsed" type="button" data-toggle="collapse"
+        data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
+        aria-label="Toggle navigation">
         <svg viewBox="0 0 100 100" width="80" onclick="this.classList.toggle('active')" class="ham hamRotate ham7">
-         <path class="line top" d="m 70,33 h -40 c 0,0 -6,1.368796 -6,8.5 0,7.131204 6,8.5013 6,8.5013 l 20,-0.0013"></path>
-         <path class="line middle" d="m 70,50 h -40"></path>
-         <path class="line bottom" d="m 69.575405,67.073826 h -40 c -5.592752,0 -6.873604,-9.348582 1.371031,-9.348582 8.244634,0 19.053564,21.797129 19.053564,12.274756 l 0,-40"></path>
-       </svg>
-        </button>
-      <div class="navbar-collapse collapse" id="collapsibleNavId" style="">
+          <path class="line top" d="m 70,33 h -40 c 0,0 -6,1.368796 -6,8.5 0,7.131204 6,8.5013 6,8.5013 l 20,-0.0013">
+          </path>
+          <path class="line middle" d="m 70,50 h -40"></path>
+          <path class="line bottom"
+            d="m 69.575405,67.073826 h -40 c -5.592752,0 -6.873604,-9.348582 1.371031,-9.348582 8.244634,0 19.053564,21.797129 19.053564,12.274756 l 0,-40">
+          </path>
+        </svg>
+      </button>
+      <div class="navbar-collapse collapse" id="collapsibleNavId">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item active">
-            <a class="nav-link nav-item-top" href="#"><span class="nav-text active-nav-text"><i class="fas fa-home fa-header" aria-hidden="true" ></i>Home</span></a>
+            <a class="nav-link nav-item-top" href="#"><span id="home-text" class="nav-text active-nav-text"><i
+                  class="fas fa-home fa-header" aria-hidden="true" alt="home-icon"></i>Home</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#"><span class="nav-text"><i class="fas fa-users fa-header" aria-hidden="true" ></i>About Us</span></a>
+            <a class="nav-link" href="#about-us"><span id="about-us-text" class="nav-text"><i
+                  class="fas fa-users fa-header" aria-hidden="true" alt="people-icon"></i>About Us</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#"><span class="nav-text"><i class="fas fa-briefcase fa-header" aria-hidden="true" ></i>Services</span></a>
+            <a class="nav-link" href="#services"><span id="service-text" class="nav-text"><i
+                  class="fas fa-briefcase fa-header" aria-hidden="true" alt="breifcase-icon"></i>Services</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#"><span class="nav-text"><i class="fas fa-wifi fa-header" aria-hidden="true" ></i>Websites</span></a>
+            <a class="nav-link" href="#websites"><span id="websites-text" class="nav-text"><i
+                  class="fas fa-wifi fa-header" aria-hidden="true" alt="wifi-icon"></i>Websites</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#"><span class="nav-text"><i class="fas fa-address-card fa-header" aria-hidden="true" ></i>Contact</span></a>
+            <a class="nav-link" href="#contact"><span id="contact-text" class="nav-text"><i
+                  class="fas fa-address-card fa-header" aria-hidden="true" alt="contact-icon"></i>Contact</span></a>
           </li>
           <li class="nav-item">
-            <button class="atlas-button">Free Quote</button>
+            <button class="atlas-button quote-button">Free Quote</button>
           </li>
         </ul>
       </div>
     </nav>
-    </header>
+  </header>
+  <!-- End of Header -->
+
+
+
+  <!-- Landing Page -->
+  <div id="main" class="container-fluid container-fluid-fix land-img-h">
+    <div class="container-fluid container-fluid-fix">
+      <div class="content">
+        <img alt="background image" class="background-img"
+          src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+      </div>
+      <div class="row m-0 land-page-row">
+        <div class="d-flex align-items-center col-sm-12 col-md-6 col-lg-6">
+          <div class="landing-page-text-wrap">
+            <h1 class="land-header">Atlas Websites</h1>
+            <h4 class="land-sub-header">Website Creators & Digital Marketing</h4>
+            <div class="landing-page-text">
+              56% of people stated that they won’t trust a business without the business having a website.
+              <br>
+              <strong>Let's bring you online!</strong>
+              <br>
+              <button class="show-button ">Show me how<i class="fa fa-arrow-right button-icon bounce"
+                  aria-hidden="true"></i></button>
+            </div>
+          </div>
+
+        </div>
+        <div class="d-flex align-items-center col-sm-12 col-md-6 col-lg-6">
+          <div class="white-box-header-wrap">
+            <div class="white-box-header">
+              <div class="white-box-text">
+                <img id="home-page" class="circle-img" src="img/CircleSamHD.png"
+                  alt="portrait of Samuel Hinchliffe, director">
+                <h3 class="whitebox-header">Samuel Hinchliffe</h3>
+                <h5 class="whitebox-sub-header">Director & Website Creator</h5>
+                <a href="tel:7837031274">
+                  <p class="telnum lightblue"><i class="fa fa-phone darkblue" style="margin-right: 5px;"
+                      aria-hidden="true"></i><span class="blue-link">07837 031274</span></p>
+                </a>
+              </div>
+            </div>
+            <div class="center-letterbox">
+              <div class="lottie-container-letterbox">
+                <img alt="coffee meeting gif" src="img/lottieImgs/coffee-meeting.gif" class="lottie-meeting" id="gif">
+                <!-- <lottie-player src="https://assets10.lottiefiles.com/packages/lf20_qxsrnv1r.json" class="lottie-meeting"
+                  background="transparent" speed="1" loop autoplay></lottie-player> -->
+              </div>
+              <p class="darkblue white-bottom">Contact us by phone or email.</p>
+              <a href="mailto:info@atlas-websites.co.uk">
+                <p class="lightblue white-email"> <span class="blue-link"
+                    style="display: inline-block;">info@atlas-websites.co.uk</span></p>
+              </a>
+            </div>
+
+
+
+          </div>
+        </div>
+
+      </div>
+
+      <!-- About US  -->
+      <div id="about-us" class="row m-0 land-page-row dual-blocks">
+
+        <div id="left-box-container" class="col-sm-12 col-md-6 col-lg-6 d-flex align-items-center left-box-container">
+
+
+          <iframe id="left-box-element" class="video-box left-box-element mobile-hide"
+            src="https://www.youtube.com/embed/Oy_ON8hZ-uU">
+          </iframe>
+
+        </div>
+
+        <div class="col-sm-12 col-md-6 col-lg-6 align-items-center ">
+          <h1 id="about-us" class="right-block-cont right-block-text">About Atlas Websites</h1>
+          <p class="right-block-subtext">Atlas Websites is a Kent based company specialising in the design and
+            development of premium hand-crafted websites. We also will manage your website for you, so you can get back
+            to running your business and leaving all the technical bits to us.</p>
+          <iframe id="left-box-element" class="video-box left-box-element mobile-show"
+            src="https://www.youtube.com/embed/Oy_ON8hZ-uU">
+          </iframe>
+          <p class="right-block-subtext">Today, not having a business with an online presence is considered a risk.
+            <span class="bold">97% of people go online to find a local business.</span> We aim to expand your business
+            by giving you that powerful online presence. Many business owners feel that without the right time or
+            resources, websites are too time-consuming. <span class="lightblue bold"> Atlas Websites is the solution to
+              this common problem. We will design and create your website, then we will manage it all for you.
+            </span></p>
+
+          <p class="right-block-subtext"> We pride ourselves on our honesty, see for yourself. Go ahead and ask us a
+            question.</p>
+          <button id="bottom-of-about" class="atlas-button">Ask us a question</button>
+        </div>
+      </div>
+
+      <!-- Our Services Title -->
+      <div id="services" class="row title-row">
+        <div id="title-row" class="col-sm-12 col-md-12 col-lg-12 d-flex align-items-center">
+          <h1 class="row-text-header">Our Services</h1>
+        </div>
+      </div>
+
+
+      <!-- Services blocks -->
+      <div id="services" class="row">
+
+
+        <div class="col-sm-12 col-md-4 col-lg-4 d-flex justify-content-center">
+
+          <div class="service-block">
+
+            <span class="services-img-cont">
+
+              <span class="services-img-wrap">
+                <img alt="website-creation icon" class="service-img" src="img/website-creation.png">
+              </span>
+
+
+            </span>
+
+            <h4 class="service-header">Website Creation</h4>
+            <h6 class="services-sub-header lightblue">Best for Small Business</h6>
+            <p class="services-text-p1">With this service, we will assign you an Expert website creator that will design
+              and <span class="bold">create your vision of the perfect website.</span> Our expert will work with you to
+              understand your business and create a design that will suit your requirements.</p>
+            <p class="services-text-p2">81% of small businesses said that a website has<span class="lightblue bold">
+                helped
+                to grow their business.</span> Watch your business grow when we bring you online.</p>
+            <button class="service-button atlas-button">Website Creation</button>
+          </div>
+
+        </div>
+
+        <div class="col-sm-12 col-md-4 col-lg-4 d-flex justify-content-center">
+
+          <div class="service-block">
+
+            <span class="services-img-cont">
+
+              <span class="services-img-wrap">
+                <img alt="shopify icon" class="service-img" src="img/shopify.png">
+              </span>
+
+
+            </span>
+
+            <h4 class="service-header">Shopify Service</h4>
+            <h6 class="services-sub-header lightblue">Best for E-Commerce Needs</h6>
+            <p class="services-text-p1">We will bring your business online with an E-Commerce feature. Giving you the
+              ability to <span class="bold">manage and sell your products through your website.</span> Giving you more
+              sales and growing your business. </p>
+            <p class="services-text-p2 shopify-button">71% of online shoppers believe that they will get better value
+              than shopping in
+              the high street. <span class="lightblue bold">We will bring your products online.</span></p>
+            <button class="service-button atlas-button">Shopify Development</button>
+          </div>
+
+        </div>
+        <div class="col-sm-12 col-md-4 col-lg-4 d-flex justify-content-center">
+
+          <div class="service-block">
+
+            <span class="services-img-cont">
+
+              <span class="services-img-wrap">
+                <img alt="wordpress icon" class="service-img" src="img/wordpress.png">
+              </span>
+
+
+            </span>
+
+            <h4 class="service-header">WordPress Service</h4>
+            <h6 class="services-sub-header lightblue">Best for a Quickly Created Websites</h6>
+            <p class="services-text-p1">Our Expert Web Designers will create your website quickly with stunning quality.
+              Trust us to invent your vision swiftly and then to manage it all for you, so you don't have too.</p>
+            <p class="services-text-p2 wp-button"><span class="lightblue bold">First impressions are 94%
+                design-related.</span> We
+              will
+              guarantee you an engaging and mobile-friendly design to grow your business.</p>
+            <button class="service-button atlas-button">WordPress Development</button>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Services block 2 -->
+      <div id="services" class="row">
+
+
+        <div class="col-sm-12 col-md-4 col-lg-4 d-flex justify-content-center">
+
+          <div class="service-block">
+
+            <span class="services-img-cont">
+
+              <span class="services-img-wrap">
+                <img alt="atlas websites icon" class="service-img atlas-service " src="img/ATLAS-WHITE-AA.png">
+              </span>
+
+
+            </span>
+
+            <h4 class="service-header">Logo Creation</h4>
+            <h6 class="services-sub-header lightblue">Created by Expert Designers</h6>
+            <p class="services-text-p1">Business logos are essentials to any business. A logo is your brand and your
+              brand will advertise itself. Our experts will work with you to create your ideal logo that represents your
+              business. </p>
+            <p class="services-text-p2">Colour improves brand recognition by up to 80%. Our designers will create your
+              business a logo that will <span class="lightblue bold">increase your brand recognition and expand your
+                reach.</span> </p>
+            <button class="service-button atlas-button">Logo Creation</button>
+          </div>
+
+        </div>
+
+        <div class="col-sm-12 col-md-4 col-lg-4 d-flex justify-content-center">
+
+          <div class="service-block">
+
+            <span class="services-img-cont">
+
+              <span class="services-img-wrap">
+                <i alt="dollar-search icon" class="fa fa-search-dollar service-img dollar-icon" aria-hidden="true"></i>
+              </span>
+
+
+            </span>
+
+            <h4 id="web-create" class="service-header">SEO</h4>
+            <h6 class="services-sub-header lightblue">Bringing you more clicks</h6>
+            <p class="services-text-p1">SEO (Search Engine Optimisation) will make your business be higher on the search
+              results. Our experts will optimise your website to attract more customers and visitors.</p>
+            <p class="services-text-p2 seo-button">75% of online searchers will never click past the first page of
+              results. <span class="lightblue bold">With SEO we can bring you closer to that first page.</span> </p>
+            <button class="service-button atlas-button">Search Engine Optimisation</button>
+          </div>
+
+        </div>
+
+        <div class="col-sm-12 col-md-4 col-lg-4 d-flex justify-content-center">
+
+          <div class="service-block">
+
+            <span class="services-img-cont">
+
+              <span class="services-img-wrap">
+                <i alt="dollar icon" class="fab fa-google service-img dollar-icon" aria-hidden="true"
+                  style="margin-left: 19px;"></i>
+              </span>
+
+
+            </span>
+
+            <h4 class="service-header">Digital Marketing</h4>
+            <h6 class="services-sub-header lightblue">Online Marketing Campagin</h6>
+            <p class="services-text-p1">The Digital Marketing service will advertise your business to increase your
+              online visibility. Atlas Websites will utilise platforms like <span class="bold">Facebook and Google to
+                advertise your business.</span></p>
+            <p class="services-text-p2 ">90% of consumers search online before visiting a business. <span
+                class="lightblue bold"> Digital Marketing will increase your online visitors by expanding your reach.
+              </span>A profitable investment for your business using digital marketing.</p>
+            <button class="service-button atlas-button">Digital Marketing</button>
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- Website Maintance & Security -->
+      <div id="web-main" class="row m-0 land-page-row dual-blocks row-fix">
+
+        <!-- Left Box -->
+        <div class="col-sm-12 col-md-6 col-lg-6 align-items-center left-box-container">
+          <div class="left-block-col-text">
+            <h1 id="about-us" class="left-block-cont left-block-text">Website Maintenance & Security</h1>
+            <p class="left-block-subtext">Website Maintenance is essential for keeping your website online. Same with
+              Website Security. This is why our Website Maintenance & Security plan does both. We will manage both of
+              them, so you don't have to worry about the security and the other website maintenance bits. <span
+                class="bold">Ultimately
+                saving you lots of time.</span></p>
+            <div id="right-box-element" class="right-box-element mobile-lottie mobile-show">
+              <lottie-player src="https://assets1.lottiefiles.com/packages/lf20_sgmqcd9d.json" class="error"
+                background="transparent" speed="1" loop autoplay></lottie-player>
+            </div>
+            <p class="left-block-subtext">The maintenance and security of your website are guaranteed. Our experts will
+              consistently check your website to ensure all of this. We do this all for you. Save yourself time, you
+              don't need to worry about Website Maintenance & Security with this plan. We're so confident with this plan
+              we made <span class="lightblue bold">the first month is FREE!</span></p>
+
+            <button class="atlas-button">See our plans</button>
+          </div>
+        </div>
+
+        <!-- Right Box -->
+        <div class="col-sm-12 col-md-6 col-lg-6 d-flex align-items-center right-box-container">
+          <div id="right-box-element" class="right-box-element-lottie mobile-hide">
+            <div class="lottie-container-right">
+
+              <lottie-player src="https://assets1.lottiefiles.com/packages/lf20_sgmqcd9d.json" class="error"
+                background="transparent" speed="1" loop autoplay></lottie-player>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="dual-block-margin"> </div>
 
 
 
 
+      <!-- Mobile Friendly Design  -->
+      <div id="web-main" class="row m-0 land-page-row dual-blocks row-fix">
 
-  <div class="container-fluid">
+        <!-- Left Box -->
+        <div class="col-sm-12 col-md-6 col-lg-6 align-items-center left-box-container">
 
+          <div id="right-box-element" class="left-box-element-lottie mobile-hide mobile-friend-lottie">
+            <div class="lottie-container-left">
+
+              <lottie-player src="https://assets4.lottiefiles.com/packages/lf20_fxvz0c.json" class="error"
+                background="transparent" speed="1" loop autoplay></lottie-player>
+            </div>
+          </div>
+
+
+
+        </div>
+
+        <!-- Right Box -->
+        <div class="col-sm-12 col-md-6 col-lg-6 d-flex  right-box-container">
+
+          <div class="left-block-col-text">
+            <h1 id="about-us" class="left-block-cont left-block-text">Mobile-Friendly Design</h1>
+            <p class="left-block-subtext">Mobile Traffic accounts for <span class="bold">55.73%</span> of all website
+              traffic. <span class="bold">57%</span> of those users say they won’t recommend a business with a poorly
+              designed website on mobile. This exactly why we build mobile-first. So we can make your website attractive
+              to all visitors. So we can increase the number of visitors your business should be getting.</p>
+            <div id="right-box-element"
+              class="right-box-element mobile-lottie mobile-show mobile-friend-lottie lottie-container-left ">
+              <lottie-player src="https://assets4.lottiefiles.com/packages/lf20_fxvz0c.json" class="error"
+                background="transparent" speed="1" loop autoplay></lottie-player>
+            </div>
+            <p class="left-block-subtext">Mobile-Friendly design is a necessary investment.<span class="bold"> 8 in 10
+                customers </span> would stop engaging with content that doesn’t display well on their device. We refuse
+              for you to miss out on this opportunity. Other website creating businesses will charge extra for this,
+              <span class="lightblue bold"> we understand how necessary mobile-friendly design is, so we made it
+                FREE.</span>
+            </p>
+
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- How much will it cost? -->
+      <div id="web-main" class="row m-0 mt-5 land-page-row dual-blocks row-fix ">
+
+        <!-- Left Box -->
+        <div class="col-sm-12 col-md-6 col-lg-6 align-items-center left-box-container">
+          <div class="left-block-col-text">
+            <h1 id="about-us" class="left-block-cont left-block-text begone-margin-top">How much will it cost?</h1>
+            <p class="left-block-subtext"><span class="bold">70-80%</span> of potential customers are lost due to
+              businesses not having a website. Our services are investments for you, <span class="lightblue bold">an
+                investment that will return you with more customers</span>, more visitors and a more trusted brand. A
+              website will grow your business. Don't miss out on this opportunity to grow your business. </p>
+            <div id="right-box-element" class="right-box-element mobile-lottie mobile-show money-lady-lottie">
+              <lottie-player src="https://assets7.lottiefiles.com/packages/lf20_ulOj9Z.json" class="error"
+                background="transparent" speed="1" loop autoplay></lottie-player>
+            </div>
+            <p class="left-block-subtext">The way we do pricing is simple. We begin with a <span class="bold">fixed
+                price based on the value of the website</span>. Followed with an optional maintenance plan, so your
+              website stays online. The price is determined by your vision of the website. We will discuss your
+              requirements followed by giving you a quote.</p>
+            <p class="left-block-subtext">Contact us for a free quote. Our experts are willing to negotiate for a better
+              deal for your investment.</p>
+            <button class="atlas-button">Free Quote</button>
+          </div>
+        </div>
+
+        <!-- Right Box -->
+        <div class="col-sm-12 col-md-6 col-lg-6 d-flex align-items-center right-box-container">
+          <div id="right-box-element" class="right-box-element-lottie mobile-hide">
+            <div class="money-lady-lottie">
+
+              <lottie-player src="https://assets7.lottiefiles.com/packages/lf20_ulOj9Z.json" class="error"
+                background="transparent" speed="1" loop autoplay></lottie-player>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="dual-block-margin"> </div>
+
+
+      <!-- How long will it take? -->
+      <div id="web-main" class="row m-0 mt-5 land-page-row dual-blocks row-fix">
+
+        <!-- Left Box -->
+        <div class="col-sm-12 col-md-6 col-lg-6 align-items-center left-box-container">
+
+          <div id="right-box-element" class="left-box-element-lottie mobile-hide mobile-friend-lottie">
+            <div class="calander-lottie">
+
+              <lottie-player src="https://assets8.lottiefiles.com/private_files/lf30_BP4Us7.json" class="error"
+                background="transparent" speed="1" loop autoplay></lottie-player>
+            </div>
+          </div>
+
+
+
+        </div>
+
+        <!-- Right Box -->
+        <div class="col-sm-12 col-md-6 col-lg-6 d-flex  right-box-container">
+
+          <div class="left-block-col-text">
+            <h1 id="about-us" class="left-block-cont left-block-text">How Long Will It Take?</h1>
+            <p class="left-block-subtext">The time it takes to create your website depends on what you want for the
+              website. No matter how long it takes, it will be worth the wait.
+              We create unique and beautiful websites so we always make your investment worth the wait.</p>
+            <div id="right-box-element"
+              class="right-box-element mobile-lottie mobile-show mobile-friend-lottie lottie-container-left calander-lottie-margins ">
+              <lottie-player src="https://assets8.lottiefiles.com/private_files/lf30_BP4Us7.json" class="error"
+                background="transparent" speed="1" loop autoplay></lottie-player>
+            </div>
+            <p class="left-block-subtext"><span class="lightblue bold">75% of consumers admit to making judgements on a
+                company’s credibility based on the company’s website design</span>. Websites are art to us. <span
+                class="bold">We never rush the art, as perfection takes time.</span> We will ensure that you're not
+              apart of that 75%, your website's design will be a beautiful investment. That will always be worth the
+              wait. </p>
+            <p class="left-block-subtext">Contact us and we will give you a estimation of how long a project would take
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- So why pick us? -->
+
+    <div id="web-main" class="row m-0 mt-5 land-page-row dual-blocks row-fix ">
+
+      <!-- Left Box -->
+      <div class="col-sm-12 col-md-6 col-lg-6 align-items-center left-box-container">
+        <div class="left-block-col-text">
+          <h1 id="about-us" class="left-block-cont left-block-text">So Why Pick Us?</h1>
+          <p class="left-block-subtext">Because <span class="lightblue bold">we're the experts at creating
+              websites</span>, we create beautiful websites at competitive prices. We love what we do, we want what is
+            best for your business, we want to solve your problems and help your business grow. We greatly care about
+            the quality of your investment. </p>
+          <div id="right-box-element" class="right-box-element  mobile-show biz-team-lottie">
+            <lottie-player src="https://assets7.lottiefiles.com/packages/lf20_U8MhmH.json" class="error"
+              background="transparent" speed="1" loop autoplay></lottie-player>
+          </div>
+          <p class="left-block-subtext">We will manage it all for you. So you don't have to. We will keep the website up
+            24/7, we will update it and make sure it's secure. We make sure all of its bills are paid for. We save you
+            time this way. So you can get on with running your business. <span class="bold">With us, you won't ever need
+              to worry about your website.</span></p>
+
+
+        </div>
+      </div>
+
+      <!-- Right Box -->
+      <div class="col-sm-12 col-md-6 col-lg-6 d-flex align-items-center right-box-container">
+        <div id="right-box-element" class="right-box-element-lottie mobile-hide">
+          <div class="biz-team-lottie">
+
+            <lottie-player src="https://assets7.lottiefiles.com/packages/lf20_U8MhmH.json" class="error"
+              background="transparent" speed="1" loop autoplay></lottie-player>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div id="websites" class="dual-block-margin"> </div>
+
+
+    <!-- Portfolio -->
+    <div class="row title-row">
+      <div id="title-row" class="col-sm-12 col-md-12 col-lg-12 d-flex align-items-center">
+        <h1 class="row-text-header">Our Websites</h1>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div id="title-row" class="col-sm-12 col-md-4 col-lg-4 d-flex justify-content-center website-split">
+        <div class="grid12-6">
+
+          <img class="website-img" src="img/StichCo.png">
+          <div class="inner_box">
+            <span class="blue-hover">
+              <span class="text-cont">
+                <h2 class="website-block-text">Stitch & CO</h2>
+                <h4 class="website-block-sub-text">Under Construction</h4>
+                <p class="hidden-subtext">Custom made embroidery products for small businesses and individual customers
+                </p>
+                <i class="fas fa-business-time website-icon"></i>
+              </span>
+            </span>
+          </div>
+
+        </div>
+        <!-- <img class="website-img" src="img/StichCo.png">
+        <div class="website-block">
+        <p class="website-block-img">Stich & CO</p>
+
+        </div> -->
+
+
+      </div>
+      <div class="col-sm-12 col-md-4 col-lg-4 d-flex justify-content-center website-split">
+        <div class="grid12-6">
+
+          <img class="website-img logo-two" src="img/ShopifyStore.png">
+          <div class="inner_box">
+            <span class="blue-hover">
+              <span class="text-cont">
+                <h2 class="website-block-text">Unamed</h2>
+                <h4 class="website-block-sub-text">Under Construction</h4>
+                <p class="hidden-subtext">A Shopify E-Commerce Small Business selling a wide range of products</p>
+                <i class="fas fa-business-time website-icon"></i>
+              </span>
+            </span>
+          </div>
+
+        </div>
+
+      </div>
+      <div id="title-row" class="col-sm-12 col-md-4 col-lg-4 d-flex justify-content-center website-split">
+        <div class="grid12-6">
+
+          <img class="website-img" src="img/Samuel Portfolio.png">
+          <div class="inner_box">
+            <span class="blue-hover">
+              <span class="text-cont">
+                <h2 class="website-block-text">SH-Web</h2>
+                <h4 class="website-block-sub-text">Under Construction</h4>
+                <p class="hidden-subtext">Website Creation service used to create a online portfolio</p>
+                <i class="fas fa-business-time website-icon"></i>
+              </span>
+            </span>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+
+<div class="row review-bar">
+
+  <div  class="col-sm-12 col-md-6 col-lg-6 ">
+      
+    <img class="review-bar-icon float-sm-none float-md-right float-lg-right align-middle" src="img/StichFounder.jpg">
 
   </div>
 
+  <div class="col-sm-12 col-md-6 col-lg-6  ">
+      
+
+    <div class="review-bar-text-wrapper">
+    <h1 class="review-bar-header">Courtney Hazell</h1>
+    <h3 class="review-bar-sub-header">Director of Stitch & CO</h3>
+    <p class="review-bar-text">"Working with Samuel from Atlas Websites has been a brilliant and easy experience. Our new website and logo looks fantastic. It's exactly how we wanted it. We have saved so much time with Atlas Websites managing it all. Thank You."</p>
+  </div>
+  </div>
+
+
+</div>
+
+<!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23339.993103284123!2d0.5216391178741501!3d51.40307269901324!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8cde72a8ecd19%3A0x37b8a5c77cb0947d!2sAtlas%20Websites!5e0!3m2!1sen!2suk!4v1611569651224!5m2!1sen!2suk" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe> -->
+
+<!-- Contact Section -->
+
+<div id="contact" class="dual-block-margin"> </div>
+
+<div class="row title-row">
+  <div id="title-row" class="col-sm-12 col-md-12 col-lg-12 d-flex align-items-center">
+    <h1 class="row-text-header">Contact Us</h1>
+  </div>
+</div>
+
+<div class="row contact-us">
+  
+  <div  class="col-sm-12 col-md-6 col-lg-6">
+    
+  <h1 class="contact-header">Our Contact Details</h1>
+
+
+    <div class="ul-container d-flex justify-content-center">
+  <ul style="list-style-type:none;"> 
+  
+    <li class="contact-text"><i class="fa fa-phone contact-icons" aria-hidden="true"></i>Phone Number: <span class="lightblue underline-fix"><a class="lightblue blue-link" href="tel:07837 031274">07837 031274</a></span></li>
+    <li class="contact-text"><i class="far fa-envelope contact-icons" aria-hidden="true"></i>Email: <span class="lightblue underline-fix"><a class="lightblue blue-link" href="mailto:info@atlas-websites.co.uk">info@atlas-websites.co.uk</a></span></li>
+    <li class="contact-text"><i class="fab fa-facebook-square contact-icons" aria-hidden="true"></i>Facebook: <span class="lightblue underline-fix"><a class="lightblue blue-link" href="https://www.facebook.com/AtlasWebsites/">Atlas Websites Facebook</a></span></li>
+    <li class="contact-text"><i class="fab fa-google contact-icons" aria-hidden="true"></i>Google Business: <span class="lightblue underline-fix"><a class="lightblue blue-link" href="https://g.page/atlas-websites?gm">Atlas Google</a></span></li>
+    <li class="contact-text"><i class="fab fa-youtube contact-icons" aria-hidden="true"></i>YouTube: <span class="lightblue underline-fix"><a class="lightblue blue-link" href="https://www.youtube.com/channel/UCVbDOq1FpcfTx1ynAwXFhoQ">Atlas Websites YouTube</a></span></li>
+    <li class="contact-text"><i class="fab fa-instagram contact-icons" aria-hidden="true"></i>Instagram: <span class="lightblue underline-fix"><a class="lightblue blue-link" href="https://www.instagram.com/atlaswebsites/">Atlas Websites Instagram</a></span></li>
+    <li class="contact-text"><i class="fab fa-linkedin contact-icons" aria-hidden="true"></i>linkedin: <span class="lightblue underline-fix"><a class="lightblue blue-link" href="https://www.linkedin.com/company/atlas-websites">Atlas Websites linkedin</a></span></li>
+  </ul>
+</div>
+  </div>
+
+  <div  class="col-sm-12 col-md-6 col-lg-6">
+    
+    <h1 class="contact-header">Contact Form</h1>
+  
+  
+      <div class="form-wrapper">
+        <h1 class="form-header">Full Name</h1>
+        <input class="form-form" placeholder=" John Doe">
+
+        <h1 class="form-header">Email</h1>
+        <input class="form-form" placeholder=" John.Doe@gmail.com">
+
+        <h1 class="form-header">Enter Your Enquiry</h1>
+
+        <textarea class="form-form form-enquire" rows="5" cols="80" id="TITLE" placeholder=" How much would it cost for..."></textarea>
+      <button class="atlas-button send-button">Send</button>
+      </div>
+
+
+    </div>
+
+
+</div>
+
+
+
+
+  </div>
+  </div>
+  </div>
+  <!-- End of main container -->
+
+  <!-- Footer Start -->
+  <footer style="padding-top: 798px;" class="bg-light text-center text-lg-start ">
+    <!-- Copyright -->
+    <div style="color: #1A4362;" class="text-left p-3 mobile-hide"><img alt="Atlas-Websites Logo"
+        src="img/AtlasWebLogo.png" class="logo-img logo-img-foot" id="copyright">© Copyright 2021 | Atlas Websites | All
+      Rights Reserved
+      <span class="footer-icon-wrap"><a href="tel:7837031274"><span class="ico-circle"><i alt="phone-icon"
+              aria-hidden="true" class="fa fa-phone icon-center"></i></span></a>
+        <a href="https://www.facebook.com/AtlasWebsites"><span class="ico-circle"><i aria-hidden="true"
+              alt="facebook logo" style="margin-left: 12px;" class="fa fa-facebook-f icon-center"></i></span></a>
+        <a href="https://www.youtube.com/channel/UCVbDOq1FpcfTx1ynAwXFhoQ"><span class="ico-circle"><i
+              alt="youtube logo" style="margin-left: 6px;" aria-hidden="true"
+              class=" fa fa-youtube icon-center"></i></span></a>
+        <a href="https://www.instagram.com/atlaswebsites/"><span class="ico-circle"><i aria-hidden="true"
+              alt="instagram-icon" style="margin-left: 9px;" class="fa fa-instagram icon-center"></i></span></a>
+        <a href="https://www.linkedin.com/company/atlas-websites"><span class="ico-circle"><i aria-hidden="true"
+              alt="linedin logo" style="margin-left: 9px;" class="fa fa-linkedin icon-center"></i></span></a>
+      </span>
+    </div>
+
+    <div style="color: #1A4362;" class="text-left p-3 mobile-show">
+      <span class="footer-icon-wrap"><a href="tel:7837031274"><span class="ico-circle"><i aria-hidden="true"
+              alt="phone logo" class="fa fa-phone icon-center "></i></span></a>
+        <a href="https://www.facebook.com/AtlasWebsites"><span class="ico-circle"><i aria-hidden="true"
+              alt="facebook icon" style="margin-left: 1px;" class="fa fa-facebook-f icon-center"></i></span></a>
+        <a href="https://www.youtube.com/channel/UCVbDOq1FpcfTx1ynAwXFhoQ"><span class="ico-circle"><i
+              alt="Youtube Icon" style="margin-left: 2px;" aria-hidden="true"
+              class=" fa fa-youtube icon-center"></i></span></a>
+        <a href="https://www.instagram.com/atlaswebsites/"><span class="ico-circle"><i aria-hidden="true"
+              alt="instagram icon" style="margin-left: 1px;" class="fa fa-instagram icon-center"></i></span></a>
+        <a href="https://www.linkedin.com/company/atlas-websites"><span class="ico-circle"><i aria-hidden="true"
+              alt="linkedin icon" style="margin-left: 1px;" class="fa fa-linkedin icon-center"></i></span></a>
+      </span>
+      <hr class="blue-line mobile-show">
+      <img alt="Atlas-Websites Logo" src="img/AtlasWebLogo.png" alt="Atlas Websites logo" class="logo-img logo-img-foot"
+        id="copyright">
+      <p class="footer-text-m">© Copyright 2021 | Atlas Websites | All Rights Reserved</p>
+
+  </footer>
+  <!-- End of Footer -->
 </body>
 
 </html>
