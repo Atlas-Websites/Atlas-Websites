@@ -3,13 +3,21 @@
 
 # TEAM
 
-    <name> -- <role> -- <twitter>
+                            
+Director & Lead Developer: Samuel Hinchliffe
+Contact: sam.hinchliffe.business@gmail.com
+From: Chatham, Kent, United Kingdom
 
+                          
 # THANKS
 
-    <name>
+    Director & Lead Developer: Samuel Hinchliffe, Director and Lead Web Developer of the Atlas Project
+    Spokesperson: Noah
+    The Initiator: My old employer for making me unemployed and giving me this opportunity to grow.
 
-# TECHNOLOGY COLOPHON
-
-    CSS3, HTML5
-    Apache Server Configs, jQuery, Modernizr, Normalize.css
+/* SITE */
+	Last update: 2020/02/01
+	Language: English
+	Doctype:HTML5
+	IDE: Notepad++, Visual Studio Code
+        Technologies: HTML5, CSS3, JS, Jquery, Bootstrap 4
