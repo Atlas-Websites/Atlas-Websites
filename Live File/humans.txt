@@ -1,0 +1,23 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+
+# TEAM     
+Director & Lead Developer: Samuel Hinchliffe
+Contact: sam.hinchliffe.business@gmail.com
+From: Chatham, Kent, United Kingdom
+
+                          
+# THANKS
+
+    Director & Lead Developer: Samuel Hinchliffe, Director and Lead Web Developer of the Atlas Project
+    Spokesperson: Noah
+    My old employer for making me unemployed and giving me this opportunity to grow.
+    And the old team for making me who I am today. :)
+
+/* SITE */
+	Last update: 2020/02/01
+	Language: English
+	Doctype:HTML5
+	IDE: Notepad++, Visual Studio Code
+        Technologies: HTML5, CSS3, JS, Jquery, Bootstrap 4, LottieFiles, GoogleFonts
