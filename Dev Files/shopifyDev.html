@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Meta Stuff -->
+    <title>Atlas Websites - E-Commerce Service</title>
+    <link rel="icon" href="icon.ico">
+    <meta name="description" content="The E-Commerce Service, bringing you online with a E-Commerce Feature">
+    <meta name="keywords"
+        content="kent, atlas websites, websites, medway, websites creators, website designers, web design, website manager, technical solutions, ecommerce, shopify, store, shop, checkout">
+    <meta name="author" content="Samuel Hinchliffe">
+    <meta name="og:title" property="og:title" content="Atlas Websites - E-Commerce Service">
+    <link type="text/plain" rel="author" href="http://www.atlas-websites.co.uk/humans.txt" />
+
+    <!-- All the JS -->
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+    <script src="https://kit.fontawesome.com/cce067e9c9.js" crossorigin="anonymous"></script>
+
+
+    <!-- All the CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Philosopher&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+
+
+
+</head>
+
+<body class="body-hide">
+
+    <!-- Alt HEADER for non main pages -->
+    <header>
+        <div class="mobile-check"></div>
+        <nav id="the-header" class="fixed-top navbar navbar-expand-md navbar-light bg-white">
+            <img alt="Atlas-Websites Logo" class="logo-img" src="img/AtlasWebLogo.png">
+            <a class="navbar-brand mr-auto" href="index.html">
+                <h1><strong class="logo-text">Atlas Websites</strong></h1>
+            </a>
+            <button class="navbar-toggler d-lg-none collapsed" type="button" data-toggle="collapse"
+                data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <svg viewBox="0 0 100 100" width="80" onclick="this.classList.toggle('active')"
+                    class="ham hamRotate ham7">
+                    <path class="line top"
+                        d="m 70,33 h -40 c 0,0 -6,1.368796 -6,8.5 0,7.131204 6,8.5013 6,8.5013 l 20,-0.0013">
+                    </path>
+                    <path class="line middle" d="m 70,50 h -40"></path>
+                    <path class="line bottom"
+                        d="m 69.575405,67.073826 h -40 c -5.592752,0 -6.873604,-9.348582 1.371031,-9.348582 8.244634,0 19.053564,21.797129 19.053564,12.274756 l 0,-40">
+                    </path>
+                </svg>
+            </button>
+            <div class="navbar-collapse collapse" id="collapsibleNavId">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link nav-item-top" href="index.html#"><span id="home-text" class="nav-text"><i
+                                    class="fas fa-home fa-header" aria-hidden="true"></i>Home</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#about-us"><span id="about-us-text" class="nav-text"><i
+                                    class="fas fa-users fa-header" aria-hidden="true"></i>About Us</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html#services"><span id="service-text"
+                                class="nav-text active-nav-text"><i class="fas fa-briefcase fa-header"
+                                    aria-hidden="true"></i>Services</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#websites"><span id="websites-text" class="nav-text"><i
+                                    class="fas fa-wifi fa-header" aria-hidden="true"></i>Websites</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#contact"><span id="contact-text" class="nav-text"><i
+                                    class="fas fa-address-card fa-header" aria-hidden="true"></i>Contact</span></a>
+                    </li>
+                    <li class=" nav-item">
+                        <button id="free-quote-button" class="atlas-button quote-button">Free Quote</button>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <script>
+        $("#free-quote-button").click(function () {
+            window.location.href = 'index.html#contact-form';
+        });    
+    </script>
+
+
+    <!-- Main -->
+    <div class="container-fluid container-fluid-fix">
+        <div class="row title-header">
+            <div id="title-row" class="col-sm-12 col-md-12 col-lg-12 d-flex align-items-center">
+                <h1 class="row-text-header-alt">Shopify Service</h1>
+            </div>
+        </div>
+
+
+        <div id="web-main" class="row m-0 mt-5 land-page-row dual-blocks row-fix ">
+
+            <!-- Left Box -->
+            <div class="col-sm-12 col-md-6 col-lg-6 align-items-center left-box-container">
+                <div class="left-block-col-text">
+                    <h1 id="about-us" class="left-block-cont left-block-text">Shopify E-Commerce Service</h1>
+                    <p class="left-block-subtext">Do you need an E-Commerce feature in your store? Where <span
+                            class="lightblue bold">customers can add your product to your shopping cart and
+                            checkout?</span> The Shopify Service is perfect for you, then. This service is specifically
+                        designed to meet this requirement. First, we'll give you a quote based on your requirements for
+                        an E-Commerce store. Our experts will send you a design of the website for review. <span
+                            class="bold">For example, if you're a store that sells T-shirts and you want to sell those
+                            T-shirts online, this service would expand your business.</span></p>
+
+                    <div id="right-box-element" class="right-box-element  mobile-show shopify-main-lottie">
+                        <lottie-player src="https://assets1.lottiefiles.com/packages/lf20_mpmR6B.json" class="error"
+                            background="transparent" speed="1" loop autoplay></lottie-player>
+                    </div>
+                    <p class="left-block-subtext">Once we have agreed on the designs for the online store, our experts
+                        will start creating your online store. With this service, you will need to select a Shopify
+                        Maintenance Plan so we can keep your website online and secure from attackers. </p>
+                    <p class="left-block-subtext"><span class="lightblue bold">We're going to make all this as easy as
+                            possible for you.</span> We're going to manage all of this for you, so you won't have to
+                        worry about all those confusing technical details.</p>
+                    <a href="PlansPages/shopifyDevPlans.html"><button class="atlas-button atlas-dual">Shopify
+                            Maintenance Plan </button></a>
+                    <a href="index.html#contact-form"><button class="atlas-button">Free Quote</button></a>
+                </div>
+            </div>
+
+            <!-- Right Box -->
+            <div class="col-sm-12 col-md-6 col-lg-6 d-flex align-items-center right-box-container">
+                <div id="right-box-element" class="right-box-element-lottie mobile-hide">
+                    <div class="shopify-main-lottie">
+
+                        <lottie-player src="https://assets1.lottiefiles.com/packages/lf20_mpmR6B.json" class="error"
+                            background="transparent" speed="1" loop autoplay></lottie-player>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="dual-block-margin"> </div>
+
+
+        <!-- Why do I need a website  -->
+
+        <div id="web-main" class="row m-0 mt-5 land-page-row dual-blocks row-fix">
+
+            <!-- Left Box -->
+            <div class="col-sm-12 col-md-6 col-lg-6 align-items-center left-box-container" style="overflow: hidden;">
+
+                <div id="right-box-element" class="left-box-element-lottie mobile-hide mobile-friend-lottie">
+                    <div class="laptop-shopify">
+
+                        <lottie-player src="https://assets6.lottiefiles.com/packages/lf20_hsojyr3p.json" class="error"
+                            background="transparent" speed="1" loop autoplay></lottie-player>
+                    </div>
+                </div>
+
+
+
+            </div>
+
+            <!-- Right Box -->
+            <div class="col-sm-12 col-md-6 col-lg-6 d-flex  right-box-container">
+
+                <div class="left-block-col-text">
+                    <h1 id="about-us" class="left-block-cont left-block-text left-block-text-alt">Advantages of a
+                        Shopify Store</h1>
+                    <p class="left-block-subtext">The main advantage of Shopify is the ability to sell your products
+                        online. <span class="lightblue bold">You will immediately increase your potential
+                            audience.</span> You have access to a larger market, which means that you are more likely to
+                        sell more products and reach more potential customers.</p>
+                    <div id="right-box-element"
+                        class="right-box-element mobile-lottie mobile-show mobile-friend-lottie lottie-container-left calander-lottie-margins ">
+                        <lottie-player src="https://assets6.lottiefiles.com/packages/lf20_hsojyr3p.json" class="error"
+                            background="transparent" speed="1" loop autoplay></lottie-player>
+                    </div>
+                    <p class="left-block-subtext">If your business already sells physical products, you may also be able
+                        to place these products in an online store. Having an online store acts as an investment, you
+                        will have the ability to reach more customers, allow customers to ask you questions and build
+                        trust with your brand. <span class="bold">Potential customers are waiting to buy your products
+                            online. Don't miss out.</span> </p>
+                    <p class="left-block-subtext">57% of shoppers make purchases from foreign retailers. That's a
+                        humongous number of potential customers you're missing out on. The Shopify Store will also have
+                        the benefits of our websites, <span class="lightblue bold">giving you the ability to reach more
+                            customers and grow your brand.</span> </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <footer style="padding-top: 100px;" class=" text-center text-lg-start ">
+        <!-- Copyright -->
+        <div style="color: #1A4362;" class="text-left p-3 mobile-hide"><img alt="Atlas-Websites Logo"
+                src="img/AtlasWebLogo.png" class="logo-img logo-img-foot" id="copyright">© Copyright 2021 | <a
+                href="terms.html" class="lightblue">Terms & Conditions</a> | <a href="privacy-policy.html"
+                class="lightblue">Privacy Policy</a>
+            <span class="footer-icon-wrap"><a href="tel:7837031274"><span class="ico-circle"><i aria-hidden="true"
+                            class="fa fa-phone icon-center"></i></span></a>
+                <a href="https://www.facebook.com/AtlasWebsites"><span class="ico-circle"><i aria-hidden="true"
+                            style="margin-left: 12px;" class="fa fa-facebook-f icon-center"></i></span></a>
+                <a href="https://www.youtube.com/channel/UCVbDOq1FpcfTx1ynAwXFhoQ"><span class="ico-circle"><i
+                            style="margin-left: 7px;" aria-hidden="true"
+                            class=" fa fa-youtube icon-center"></i></span></a>
+                <a href="https://www.instagram.com/atlaswebsites/"><span class="ico-circle"><i aria-hidden="true"
+                            style="margin-left: 9px;" class="fa fa-instagram icon-center"></i></span></a>
+                <a href="https://www.linkedin.com/company/atlas-websites"><span class="ico-circle"><i aria-hidden="true"
+                            style="margin-left: 9px;" class="fa fa-linkedin icon-center"></i></span></a>
+            </span>
+        </div>
+
+        <div style="color: #1A4362;" class="text-left p-3 mobile-show">
+            <span class="footer-icon-wrap"><a href="tel:7837031274"><span class="ico-circle"><i aria-hidden="true"
+                            class="fa fa-phone icon-center "></i></span></a>
+                <a href="https://www.facebook.com/AtlasWebsites"><span class="ico-circle"><i aria-hidden="true"
+                            style="margin-left: 1px;" class="fa fa-facebook-f icon-center"></i></span></a>
+                <a href="https://www.youtube.com/channel/UCVbDOq1FpcfTx1ynAwXFhoQ"><span class="ico-circle"><i
+                            style="margin-left: 2px;" aria-hidden="true"
+                            class=" fa fa-youtube icon-center"></i></span></a>
+                <a href="https://www.instagram.com/atlaswebsites/"><span class="ico-circle"><i aria-hidden="true"
+                            style="margin-left: 1px;" class="fa fa-instagram icon-center"></i></span></a>
+                <a href="https://www.linkedin.com/company/atlas-websites"><span class="ico-circle"><i aria-hidden="true"
+                            style="margin-left: 1px;" class="fa fa-linkedin icon-center"></i></span></a>
+            </span>
+            <hr class="blue-line mobile-show">
+            <img loading="lazy" alt="Atlas-Websites Logo" src="img/AtlasWebLogo.png" alt="Atlas Websites logo"
+                class="logo-img logo-img-foot" id="copyright">
+            <p class="footer-text-m">© Copyright 2021 | <a href="terms.html" class="lightblue">Terms & Conditions</a> |
+                <a href="privacy-policy.html" class="lightblue">Privacy Policy</a>
+            </p>
+
+    </footer>
+
+
+</body>
+
+</html>
